@@ -3,7 +3,7 @@ import { localizacoes } from '../dados/globais/geradorDeData.dados.js'
 import 'dayjs/locale/pt-br'
 import 'dayjs/locale/en'
 
-export default class GeradorDeData {
+class GeradorDeData {
 
     /**
      * Método que retorna uma instância do dayjs configurada com a localização passada por parâmetro
@@ -49,3 +49,5 @@ export default class GeradorDeData {
         return this.#gerarData(localizacao).subtract(quantidade, unidade).format(formato)
     }
 }
+
+export default new GeradorDeData()

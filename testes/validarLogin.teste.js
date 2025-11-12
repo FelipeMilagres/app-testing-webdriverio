@@ -1,6 +1,10 @@
+import TelaLogin from "../telas/login/login.tela"
+
 describe('Testando configuração', () => {
 
     it('Primeira conexão', async () => {
-        await driver.pause(1000)
+        let telaLogin = new TelaLogin()
+
+        await telaLogin.clicar()
     })
 })

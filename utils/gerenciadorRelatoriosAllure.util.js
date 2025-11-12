@@ -4,7 +4,7 @@ import path from 'path'
 import fs from 'fs'
 import dayjs from 'dayjs'
 
-export default class GerenciadorRelatoriosAllure {
+class GerenciadorRelatoriosAllure {
 
     /**
      * @param {Object} parametros
@@ -25,13 +25,11 @@ export default class GerenciadorRelatoriosAllure {
      * @param {String} funcionalidade - Nome da funcionalidade do teste.
      * @param {String} severidade - Nível de severidade (blocker, critical, normal, minor, trivial).
      * @param {String} responsavel - Nome da pessoa responsável pelo cenário.
-     * @param {String} descricao - Descrição adicional do teste.
      */
-    adicionarInformacoes(funcionalidade, severidade, responsavel, descricao) {
+    adicionarInformacoes(funcionalidade, severidade, responsavel) {
         allureReporter.addFeature(funcionalidade)
         allureReporter.addSeverity(severidade)
         allureReporter.addArgument('Responsável pelo cenário', responsavel)
-        allureReporter.addDescription(descricao)
     }
 
     /**
@@ -79,3 +77,5 @@ export default class GerenciadorRelatoriosAllure {
         }
     }
 }
+
+export default new GerenciadorRelatoriosAllure()

@@ -1,7 +1,7 @@
 /* Valores de tempo limite do projeto */
-export const tempoLimite = {
-    default: 18000,
-    long: 30000,
-    veryLong: 60000,
-    highest: 120000
+export default {
+    padrao: 18000,
+    longo: 30000,
+    muitoLongo: 60000,
+    maximo: 120000
 }
