@@ -1,11 +1,10 @@
-reports/
+relatorios/**/*.html
+resultados/**/*.png
+resultados/**/*.json
+resultados/**/*.txt
+apps/**/*.app
+apps/**/*.apk
 node_modules/
 allure-results/
 yarn.lock
 .DS_Store
-results/android/*.png
-results/android/*.json
-results/android/*.txt
-results/ios/*.png
-results/ios/*.json
-results/ios/*.txt
