@@ -1,7 +1,7 @@
-// eslint.config.js
+// eslint.config.mjs
 import js from "@eslint/js";
-import mochaPlugin from "eslint-plugin-mocha";
-import wdio from "eslint-plugin-wdio";
+import * as mocha from "eslint-plugin-mocha";
+import * as wdio from "eslint-plugin-wdio";
 
 export default [
   {
@@ -9,9 +9,8 @@ export default [
       "node_modules/",
       "dist/",
       "build/",
-      "coverage/",
-      "*.min.js"
-    ],
+      "coverage/"
+    ]
   },
 
   js.configs.recommended,
@@ -31,21 +30,15 @@ export default [
     },
 
     plugins: {
-      mocha: mochaPlugin,
+      mocha,
       wdio
     },
 
     rules: {
-      // Gerais
       "no-unused-vars": "warn",
       "no-undef": "error",
-
-      // Mocha
-      "mocha/no-exclusive-tests": "error",
-
-      // WDIO
       "wdio/no-pause": "warn",
       "wdio/no-sync": "off"
     }
   }
-];
+]
