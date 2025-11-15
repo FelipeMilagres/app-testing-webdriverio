@@ -4,7 +4,7 @@ import path from 'path'
 import fs from 'fs'
 import dayjs from 'dayjs'
 
-class GerenciadorRelatoriosAllure {
+export default class GerenciadorRelatoriosAllure {
 
     /**
      * @param {Object} parametros
@@ -77,5 +77,3 @@ class GerenciadorRelatoriosAllure {
         }
     }
 }
-
-export default new GerenciadorRelatoriosAllure()
